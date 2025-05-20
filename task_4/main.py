@@ -33,7 +33,7 @@ def show_contacts(contacts):
 
     return f"All contacts:\n{result}"
 
-@input_error
+
 def main():
     contacts = {}
     print("Hello, I your assistent, enter command")
