@@ -2,7 +2,7 @@ import re
 
 
 def generator_numbers(text: str):
-    pattern_float = r"\d+[.]+\d*"
+    pattern_float = r" \d+[.]+\d* "
     
     for number in re.findall(pattern_float, text):
         yield float(number)

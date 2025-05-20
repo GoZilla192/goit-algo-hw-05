@@ -33,13 +33,17 @@ def show_contacts(contacts):
 
     return f"All contacts:\n{result}"
 
-
+@input_error
 def main():
     contacts = {}
     print("Hello, I your assistent, enter command")
 
     while True:
         user_input = input(f"{Fore.BLUE}[Assistent]{Fore.RESET} > ")
+
+        if not user_input or user_input.isspace():
+            continue
+
         command, *args = parse_input(user_input)
 
         if command in ["exit", "close"]:
